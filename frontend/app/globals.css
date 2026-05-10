@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand token CSS variables — keep in sync with tailwind.config.ts */
+:root {
+  --ink-50:  #f4f7fb;
+  --ink-100: #e6edf6;
+  --ink-200: #c8d6e8;
+  --ink-700: #1f3554;
+  --ink-900: #0b1a30;
+  --signal-500: #13b9a6;
+  --signal-600: #0e9789;
+}
+
+html, body {
+  background-color: var(--ink-50);
+  color: var(--ink-900);
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle grid background for the dashboard shell */
+.bg-grid {
+  background-image:
+    linear-gradient(to right,  rgba(31,53,84,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31,53,84,0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Citation chip used in chat bubbles */
+.cite-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--ink-100);
+  color: var(--ink-700);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  border: 1px solid var(--ink-200);
+}

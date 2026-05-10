@@ -1,0 +1,33 @@
+{
+  "name": "smp-documind-backend",
+  "version": "1.0.0",
+  "description": "TypeScript API gateway for SMP DocuMind",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "lint": "eslint src --ext .ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.3.1",
+    "pino": "^9.2.0",
+    "pino-http": "^10.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

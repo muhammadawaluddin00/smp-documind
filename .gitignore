@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+.tmp/
+*.log
+
+# Node
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Audit log (runtime file)
+backend/audit.log
+backend/audit-log.jsonl
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

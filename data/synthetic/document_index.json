@@ -1,0 +1,141 @@
+[
+  {
+    "doc_id": "DOC-001",
+    "title": "AIOps Incident Response Playbook",
+    "category": "Operations",
+    "tags": [
+      "aiops",
+      "incident",
+      "playbook",
+      "on-call"
+    ],
+    "last_updated": "2025-09-14",
+    "path": "data/synthetic/documents/DOC-001.md",
+    "char_count": 1287
+  },
+  {
+    "doc_id": "DOC-002",
+    "title": "Machine Learning Model Deployment Standard",
+    "category": "Engineering",
+    "tags": [
+      "mlops",
+      "deployment",
+      "engineering",
+      "model-card"
+    ],
+    "last_updated": "2025-10-02",
+    "path": "data/synthetic/documents/DOC-002.md",
+    "char_count": 1207
+  },
+  {
+    "doc_id": "DOC-003",
+    "title": "Data Privacy and PII Handling Policy",
+    "category": "Compliance",
+    "tags": [
+      "compliance",
+      "privacy",
+      "pii",
+      "security"
+    ],
+    "last_updated": "2025-08-20",
+    "path": "data/synthetic/documents/DOC-003.md",
+    "char_count": 1302
+  },
+  {
+    "doc_id": "DOC-004",
+    "title": "Generative AI Usage Guidelines for Employees",
+    "category": "Compliance",
+    "tags": [
+      "genai",
+      "policy",
+      "compliance",
+      "guidelines"
+    ],
+    "last_updated": "2025-11-05",
+    "path": "data/synthetic/documents/DOC-004.md",
+    "char_count": 1174
+  },
+  {
+    "doc_id": "DOC-005",
+    "title": "Customer Support Chatbot Architecture",
+    "category": "Architecture",
+    "tags": [
+      "chatbot",
+      "rag",
+      "architecture",
+      "llm"
+    ],
+    "last_updated": "2025-10-18",
+    "path": "data/synthetic/documents/DOC-005.md",
+    "char_count": 1488
+  },
+  {
+    "doc_id": "DOC-006",
+    "title": "Translation Quality Evaluation Standard",
+    "category": "Engineering",
+    "tags": [
+      "translation",
+      "evaluation",
+      "bleu",
+      "bertscore"
+    ],
+    "last_updated": "2025-09-30",
+    "path": "data/synthetic/documents/DOC-006.md",
+    "char_count": 1241
+  },
+  {
+    "doc_id": "DOC-007",
+    "title": "On-Call Engineer Onboarding Guide",
+    "category": "Operations",
+    "tags": [
+      "on-call",
+      "onboarding",
+      "operations"
+    ],
+    "last_updated": "2025-07-11",
+    "path": "data/synthetic/documents/DOC-007.md",
+    "char_count": 1089
+  },
+  {
+    "doc_id": "DOC-008",
+    "title": "Vector Database Selection Rationale",
+    "category": "Architecture",
+    "tags": [
+      "vector-db",
+      "rag",
+      "architecture",
+      "qdrant",
+      "faiss"
+    ],
+    "last_updated": "2025-10-25",
+    "path": "data/synthetic/documents/DOC-008.md",
+    "char_count": 1268
+  },
+  {
+    "doc_id": "DOC-009",
+    "title": "Prompt Engineering Best Practices",
+    "category": "Engineering",
+    "tags": [
+      "prompt-engineering",
+      "llm",
+      "best-practices"
+    ],
+    "last_updated": "2025-11-12",
+    "path": "data/synthetic/documents/DOC-009.md",
+    "char_count": 1381
+  },
+  {
+    "doc_id": "DOC-010",
+    "title": "DocuMind System Overview",
+    "category": "Architecture",
+    "tags": [
+      "documind",
+      "architecture",
+      "overview",
+      "rag"
+    ],
+    "last_updated": "2025-11-20",
+    "path": "data/synthetic/documents/DOC-010.md",
+    "char_count": 1498
+  }
+]

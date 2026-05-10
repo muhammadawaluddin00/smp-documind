@@ -1,0 +1,912 @@
+{
+  "summary": {
+    "n": 50,
+    "mean_answer_relevance": 0.21081176119372816,
+    "retrieval_hit_rate": 1.0,
+    "citation_faithfulness": 0.96,
+    "p50_latency_ms": 1.0827575000007528,
+    "p95_latency_ms": 1.4110612000138183,
+    "by_difficulty": {
+      "hard": {
+        "n": 5,
+        "mean_answer_relevance": 0.0578843789416976,
+        "retrieval_hit_rate": 1.0,
+        "citation_faithfulness": 1.0,
+        "p50_latency_ms": 1.227939999978389
+      },
+      "medium": {
+        "n": 22,
+        "mean_answer_relevance": 0.26196032981273193,
+        "retrieval_hit_rate": 1.0,
+        "citation_faithfulness": 1.0,
+        "p50_latency_ms": 1.0703389999946467
+      },
+      "easy": {
+        "n": 23,
+        "mean_answer_relevance": 0.1951321264825138,
+        "retrieval_hit_rate": 1.0,
+        "citation_faithfulness": 0.9130434782608695,
+        "p50_latency_ms": 1.0747409999680713
+      }
+    }
+  },
+  "per_question": [
+    {
+      "qa_id": "QA-001",
+      "question": "What is the maximum acknowledgement time for a SEV-1 alert?",
+      "expected_answer": "On-call lead must be paged within 2 minutes for a SEV-1 incident.",
+      "predicted_answer": "Post-Incident Review\nA blameless post-mortem is mandatory for every SEV-1 and SEV-2 incident. [DOC-001] Review\nA blameless post-mortem is mandatory for every SEV-1 and SEV-2 incident. [DOC-001] Escalation Path\nFirst responder is the primary on-call engineer. [DOC-001]",
+      "expected_doc_ids": [
+        "DOC-001"
+      ],
+      "predicted_citations": [
+        "DOC-001"
+      ],
+      "answer_relevance": 0.1973251928134384,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 2.169063999986065,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-002",
+      "question": "When is a blameless post-mortem mandatory?",
+      "expected_answer": "For every SEV-1 and SEV-2 incident; it must be published within 5 business days.",
+      "predicted_answer": "Review\nA blameless post-mortem is mandatory for every SEV-1 and SEV-2 incident. [DOC-001] Post-Incident Review\nA blameless post-mortem is mandatory for every SEV-1 and SEV-2 incident. [DOC-001] The post-mortem must be published within 5 business days and include:\nroot cause, contributing factors, customer impact, and three concrete\nfollow-up actions with assigned owners. [DOC-001]",
+      "expected_doc_ids": [
+        "DOC-001"
+      ],
+      "predicted_citations": [
+        "DOC-001"
+      ],
+      "answer_relevance": 0.486413041672541,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.0483859999794731,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-003",
+      "question": "How long until an unacknowledged page escalates to the secondary on-call engineer?",
+      "expected_answer": "After 10 minutes without acknowledgement.",
+      "predicted_answer": "If unacknowledged after\n10 minutes, the alert escalates to the secondary on-call engineer. [DOC-001] Escalation Path\nFirst responder is the primary on-call engineer. [DOC-001] Eligibility\nAn engineer becomes on-call eligible after (a) 90 days of tenure on the\nteam, (b) two shadow shifts with a senior engineer, and (c) passing the\nrunbook quiz with a score of at least 80%. [DOC-007]",
+      "expected_doc_ids": [
+        "DOC-001"
+      ],
+      "predicted_citations": [
+        "DOC-001",
+        "DOC-007"
+      ],
+      "answer_relevance": 0.15890201841948165,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2116970000306537,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-004",
+      "question": "When is an incident commander automatically paged?",
+      "expected_answer": "Twenty minutes after the original page if it remains unacknowledged.",
+      "predicted_answer": "After\n20 minutes, the incident commander is paged automatically. [DOC-001] Post-Incident Review\nA blameless post-mortem is mandatory for every SEV-1 and SEV-2 incident. [DOC-001] Escalation Path\nFirst responder is the primary on-call engineer. [DOC-001]",
+      "expected_doc_ids": [
+        "DOC-001"
+      ],
+      "predicted_citations": [
+        "DOC-001"
+      ],
+      "answer_relevance": 0.04567843201759035,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.9611980000272524,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-005",
+      "question": "What three artifacts must accompany a model promoted to staging?",
+      "expected_answer": "A versioned model file, a model card, a pinned requirements.txt, and an evaluation report.",
+      "predicted_answer": "Required Artifacts\nEvery model promoted to staging must include:\n\n1. [DOC-002] Purpose\nStandardizes how ML models move from a research notebook to a\nproduction-served endpoint inside SMP infrastructure. [DOC-002] A versioned model file (ONNX, TorchScript, or pickled scikit-learn). [DOC-002]",
+      "expected_doc_ids": [
+        "DOC-002"
+      ],
+      "predicted_citations": [
+        "DOC-002"
+      ],
+      "answer_relevance": 0.1551216617247319,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1401149999983318,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-006",
+      "question": "What does Gate B require for a model promotion?",
+      "expected_answer": "The candidate must beat the current production baseline by at least 1% absolute on the offline metric.",
+      "predicted_answer": "granted for a maximum of 30 days; renewals require fresh\nmanager approval. [DOC-003] Use in Machine Learning\nML training datasets containing PII must be either (a) de-identified\nthrough tokenization or hashing, or (b) processed inside the secure\nenclave with no model artifact carrying memorized PII out. [DOC-003] Approval Gates\nModels pass through three gates before serving production traffic:\n\n- **Gate A (Code review)**: Two engineers approve the training pipeline. [DOC-002]",
+      "expected_doc_ids": [
+        "DOC-002"
+      ],
+      "predicted_citations": [
+        "DOC-003",
+        "DOC-002"
+      ],
+      "answer_relevance": 0.026587945266060654,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.09778100005542,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-007",
+      "question": "How long is the shadow-traffic period before serving production traffic?",
+      "expected_answer": "Seven days.",
+      "predicted_answer": "- **Gate C (Shadow traffic)**: The candidate runs alongside production\n  for 7 days, processing live traffic without serving responses to users. [DOC-002] Approval Gates\nModels pass through three gates before serving production traffic:\n\n- **Gate A (Code review)**: Two engineers approve the training pipeline. [DOC-002] ific metric must\n  beat the current production baseline by at least 1% absolute. [DOC-002]",
+      "expected_doc_ids": [
+        "DOC-002"
+      ],
+      "predicted_citations": [
+        "DOC-002"
+      ],
+      "answer_relevance": 0.029503195859093216,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.096024000048601,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-008",
+      "question": "What is the canary rollout schedule?",
+      "expected_answer": "1%, then 10%, 50%, 100%, with 24 hours of observation between each step.",
+      "predicted_answer": "Rollout Strategy\nDefault rollout is canary at 1% -> 10% -> 50% -> 100% with 24 hours of\nobservation between each step. [DOC-002] Automatic rollback is triggered if the\ngolden-signal error rate exceeds 0.5% above the previous version. [DOC-002] ific metric must\n  beat the current production baseline by at least 1% absolute. [DOC-002]",
+      "expected_doc_ids": [
+        "DOC-002"
+      ],
+      "predicted_citations": [
+        "DOC-002"
+      ],
+      "answer_relevance": 0.45334406343821115,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.0361690000308954,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-009",
+      "question": "What error-rate increase triggers automatic rollback?",
+      "expected_answer": "Golden-signal error rate exceeding 0.5% above the previous version.",
+      "predicted_answer": "Automatic rollback is triggered if the\ngolden-signal error rate exceeds 0.5% above the previous version. [DOC-002] ific metric must\n  beat the current production baseline by at least 1% absolute. [DOC-002] - **Gate C (Shadow traffic)**: The candidate runs alongside production\n  for 7 days, processing live traffic without serving responses to users. [DOC-002]",
+      "expected_doc_ids": [
+        "DOC-002"
+      ],
+      "predicted_citations": [
+        "DOC-002"
+      ],
+      "answer_relevance": 0.351741303443767,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.7847910000009506,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-010",
+      "question": "What encryption is required for PII at rest?",
+      "expected_answer": "AES-256, with keys managed by the central KMS and rotated every 90 days.",
+      "predicted_answer": "Storage Requirements\nPII at rest must be encrypted using AES-256. [DOC-003] # Data Privacy and PII Handling Policy\n\n## 1. [DOC-003] Definitions\n**Personally Identifiable Information (PII)** includes any data that can\nidentify a natural person directly or indirectly. [DOC-003]",
+      "expected_doc_ids": [
+        "DOC-003"
+      ],
+      "predicted_citations": [
+        "DOC-003"
+      ],
+      "answer_relevance": 0.0825391325204331,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.9912669999607715,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-011",
+      "question": "What are the two acceptable ways to use PII for ML training?",
+      "expected_answer": "De-identification through tokenization or hashing, or processing inside the secure enclave with no PII memorized in artifacts.",
+      "predicted_answer": "Use in Machine Learning\nML training datasets containing PII must be either (a) de-identified\nthrough tokenization or hashing, or (b) processed inside the secure\nenclave with no model artifact carrying memorized PII out. [DOC-003] Breach Notification\nSuspected PII breaches must be reported to the Data Protection Officer\nwithin 1 hour of detection. [DOC-003] Training Data\nSubmitting company data to vendors that retain prompts for training is\nprohibited unless an explicit zero-data-retention agreement is in place\nand approved by the Legal team. [DOC-004]",
+      "expected_doc_ids": [
+        "DOC-003"
+      ],
+      "predicted_citations": [
+        "DOC-003",
+        "DOC-004"
+      ],
+      "answer_relevance": 0.3033450778437444,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1263910000138821,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-012",
+      "question": "What is the maximum duration of read access to a PII table before renewal?",
+      "expected_answer": "Thirty days; renewals require fresh manager approval.",
+      "predicted_answer": "Read access is granted for a maximum of 30 days; renewals require fresh\nmanager approval. [DOC-003] All access requires a\ndocumented business justification and is logged in the audit pipeline. [DOC-003] Access Control\nAccess to PII tables follows least-privilege. [DOC-003]",
+      "expected_doc_ids": [
+        "DOC-003"
+      ],
+      "predicted_citations": [
+        "DOC-003"
+      ],
+      "answer_relevance": 0.30808077199642453,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2561590000359502,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-013",
+      "question": "Within how many hours must a suspected PII breach be reported to the DPO?",
+      "expected_answer": "Within 1 hour of detection.",
+      "predicted_answer": "Breach Notification\nSuspected PII breaches must be reported to the Data Protection Officer\nwithin 1 hour of detection. [DOC-003] Use in Machine Learning\nML training datasets containing PII must be either (a) de-identified\nthrough tokenization or hashing, or (b) processed inside the secure\nenclave with no model artifact carrying memorized PII out. [DOC-003] ches must be reported to the Data Protection Officer\nwithin 1 hour of detection. [DOC-003]",
+      "expected_doc_ids": [
+        "DOC-003"
+      ],
+      "predicted_citations": [
+        "DOC-003"
+      ],
+      "answer_relevance": 0.3643789172783771,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2009110000121836,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-014",
+      "question": "What are the GDPR and UU PDP notification timelines for a PII breach?",
+      "expected_answer": "GDPR is 72 hours; UU PDP Indonesia is 3x24 hours.",
+      "predicted_answer": "Regulatory notification follows the timelines\nmandated by the applicable jurisdiction (GDPR: 72 hours; UU PDP\nIndonesia: 3x24 hours). [DOC-003] Breach Notification\nSuspected PII breaches must be reported to the Data Protection Officer\nwithin 1 hour of detection. [DOC-003] ches must be reported to the Data Protection Officer\nwithin 1 hour of detection. [DOC-003]",
+      "expected_doc_ids": [
+        "DOC-003"
+      ],
+      "predicted_citations": [
+        "DOC-003"
+      ],
+      "answer_relevance": 0.2769421118870012,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2077509999812719,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-015",
+      "question": "Which Generative AI tools are currently approved for employee use?",
+      "expected_answer": "The SMP-internal LLM gateway, OpenAI through the enterprise account, and the on-prem Llama-3 inference cluster.",
+      "predicted_answer": "Approved Tools\nOnly Generative AI tools listed in the central AI registry may be used\nfor company work. [DOC-004] # Generative AI Usage Guidelines for Employees\n\n## 1. [DOC-004] Currently approved: SMP-internal LLM gateway, OpenAI\n(via enterprise account), and the on-prem Llama-3 inference cluster. [DOC-004]",
+      "expected_doc_ids": [
+        "DOC-004"
+      ],
+      "predicted_citations": [
+        "DOC-004"
+      ],
+      "answer_relevance": 0.4688230364006634,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.0747409999680713,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-016",
+      "question": "What kinds of inputs are prohibited in Generative AI tools?",
+      "expected_answer": "Customer PII or credentials, proprietary source code from restricted repositories, unreleased financial figures, and Confidential or Restricted information.",
+      "predicted_answer": "Approved Tools\nOnly Generative AI tools listed in the central AI registry may be used\nfor company work. [DOC-004] Prohibited Inputs\nEmployees must never paste the following into any Generative AI tool:\n\n- Customer PII or credentials\n- Proprietary source code from restricted repositories\n- Unreleased financial figures\n- Information classified as Confidential or Restricted\n\n## 3. [DOC-004] # Generative AI Usage Guidelines for Employees\n\n## 1. [DOC-004]",
+      "expected_doc_ids": [
+        "DOC-004"
+      ],
+      "predicted_citations": [
+        "DOC-004"
+      ],
+      "answer_relevance": 0.4771987019842754,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.9266450000495752,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-017",
+      "question": "When must Generative AI contributions be disclosed?",
+      "expected_answer": "When Generative AI substantially contributed to a deliverable, in the document footer or commit message.",
+      "predicted_answer": "Attribution\nWhen Generative AI substantially contributed to a deliverable, the\ncontribution must be disclosed in the document footer or commit message. [DOC-004] Approved Tools\nOnly Generative AI tools listed in the central AI registry may be used\nfor company work. [DOC-004] # Generative AI Usage Guidelines for Employees\n\n## 1. [DOC-004]",
+      "expected_doc_ids": [
+        "DOC-004"
+      ],
+      "predicted_citations": [
+        "DOC-004"
+      ],
+      "answer_relevance": 0.5817681212140926,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.8043270000257507,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-018",
+      "question": "Under what condition can company data be sent to a vendor that retains prompts?",
+      "expected_answer": "Only with an explicit zero-data-retention agreement approved by Legal.",
+      "predicted_answer": "Training Data\nSubmitting company data to vendors that retain prompts for training is\nprohibited unless an explicit zero-data-retention agreement is in place\nand approved by the Legal team. [DOC-004] Attribution\nWhen Generative AI substantially contributed to a deliverable, the\ncontribution must be disclosed in the document footer or commit message. [DOC-004] Definitions\n**Personally Identifiable Information (PII)** includes any data that can\nidentify a natural person directly or indirectly. [DOC-003]",
+      "expected_doc_ids": [
+        "DOC-004"
+      ],
+      "predicted_citations": [
+        "DOC-004",
+        "DOC-003"
+      ],
+      "answer_relevance": 0.2868423344525196,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1734720000049492,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-019",
+      "question": "What percentage of Tier-1 inquiries does the Customer Support Chatbot resolve without human escalation?",
+      "expected_answer": "Sixty-five percent.",
+      "predicted_answer": "Overview\nThe Customer Support Chatbot resolves Tier-1 inquiries using a\nretrieval-augmented generation (RAG) pipeline backed by the company\nknowledge base. [DOC-005] # Customer Support Chatbot Architecture\n\n## 1. [DOC-005] It currently handles 65% of incoming tickets without\nhuman escalation. [DOC-005]",
+      "expected_doc_ids": [
+        "DOC-005"
+      ],
+      "predicted_citations": [
+        "DOC-005"
+      ],
+      "answer_relevance": 0.0,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1435549999987416,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-020",
+      "question": "Which embedding model does the Customer Support Chatbot use for retrieval?",
+      "expected_answer": "sentence-transformers/all-MiniLM-L6-v2, combined with BM25 in a hybrid retriever and reranked by a cross-encoder.",
+      "predicted_answer": "Overview\nThe Customer Support Chatbot resolves Tier-1 inquiries using a\nretrieval-augmented generation (RAG) pipeline backed by the company\nknowledge base. [DOC-005] Background\nSMP needed to choose a vector database to back the RAG retrieval layer\nof the Customer Support Chatbot and DocuMind. [DOC-008] # Customer Support Chatbot Architecture\n\n## 1. [DOC-005]",
+      "expected_doc_ids": [
+        "DOC-005"
+      ],
+      "predicted_citations": [
+        "DOC-005",
+        "DOC-008"
+      ],
+      "answer_relevance": 0.00983461891137475,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1318040000105611,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-021",
+      "question": "What is the end-to-end p95 latency budget for the Customer Support Chatbot?",
+      "expected_answer": "Under 2.5 seconds end-to-end.",
+      "predicted_answer": "Latency Budget\nEnd-to-end p95 latency must stay under 2.5 seconds. [DOC-005] Background\nSMP needed to choose a vector database to back the RAG retrieval layer\nof the Customer Support Chatbot and DocuMind. [DOC-008] Overview\nThe Customer Support Chatbot resolves Tier-1 inquiries using a\nretrieval-augmented generation (RAG) pipeline backed by the company\nknowledge base. [DOC-005]",
+      "expected_doc_ids": [
+        "DOC-005"
+      ],
+      "predicted_citations": [
+        "DOC-005",
+        "DOC-008"
+      ],
+      "answer_relevance": 0.2721782138353828,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2900980000267737,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-022",
+      "question": "How is the latency budget allocated across components?",
+      "expected_answer": "300 ms for retrieval, 1800 ms for generation, and 400 ms for network and overhead.",
+      "predicted_answer": "e\n  filter that aborts the response if retrieval similarity is below 0.45. [DOC-005] Latency Budget\nEnd-to-end p95 latency must stay under 2.5 seconds. [DOC-005] Scope\nDefines how we evaluate machine-translated output across the SMP\nmultilingual product surfaces (Bahasa Indonesia, English, Mandarin,\nJapanese). [DOC-006]",
+      "expected_doc_ids": [
+        "DOC-005"
+      ],
+      "predicted_citations": [
+        "DOC-005",
+        "DOC-006"
+      ],
+      "answer_relevance": 0.006756436057063336,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.9632690000103139,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-023",
+      "question": "Under what conditions does the chatbot escalate to a human agent?",
+      "expected_answer": "When the user requests it, when the safety classifier fires, after three unresolved questions in a row, or when the topic is on the no-bot-allowed list.",
+      "predicted_answer": "Escalation\nThe bot escalates to a human agent if (a) the user explicitly requests\nit, (b) the safety classifier fires, (c) the same user has asked three\nunresolved questions in a row, or (d) the topic is on the\nno-bot-allowed list (billing disputes, account closure, legal threats). [DOC-005] Overview\nThe Customer Support Chatbot resolves Tier-1 inquiries using a\nretrieval-augmented generation (RAG) pipeline backed by the company\nknowledge base. [DOC-005] Out of Scope\nDocuMind does not (yet): generate new documents, modify the knowledge\nbase, take actions on the user's behalf, or operate without a\nretrieval grounding step. [DOC-010]",
+      "expected_doc_ids": [
+        "DOC-005"
+      ],
+      "predicted_citations": [
+        "DOC-005",
+        "DOC-010"
+      ],
+      "answer_relevance": 0.39612025085396757,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.021484999967015,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-024",
+      "question": "What is the relevance-filter similarity threshold below which the bot aborts the response?",
+      "expected_answer": "0.45.",
+      "predicted_answer": "- **Guardrails**: Output classifier for unsafe content, plus a relevance\n  filter that aborts the response if retrieval similarity is below 0.45. [DOC-005] e\n  filter that aborts the response if retrieval similarity is below 0.45. [DOC-005] - **Retriever**: Hybrid BM25 + dense (sentence-transformers/all-MiniLM-L6-v2)\n  retrieval over the knowledge base, reranked with a cross-encoder. [DOC-005]",
+      "expected_doc_ids": [
+        "DOC-005"
+      ],
+      "predicted_citations": [
+        "DOC-005"
+      ],
+      "answer_relevance": 0.1759180836926079,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2470540000322217,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-025",
+      "question": "Which three automatic metrics do we report for translation quality?",
+      "expected_answer": "BLEU-4, chrF++, and BERTScore F1 computed with a multilingual XLM-R backbone.",
+      "predicted_answer": "Automatic Metrics\nWe report three complementary metrics on every release candidate:\n\n- **BLEU-4**: Surface-level n-gram overlap. [DOC-006] # Translation Quality Evaluation Standard\n\n## 1. [DOC-006] Useful for regression\n  detection, less useful for absolute quality. [DOC-006]",
+      "expected_doc_ids": [
+        "DOC-006"
+      ],
+      "predicted_citations": [
+        "DOC-006"
+      ],
+      "answer_relevance": 0.023299497485111034,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.028577999989011,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-026",
+      "question": "What is the minimum inter-annotator agreement (kappa) required for human evaluation?",
+      "expected_answer": "Cohen's kappa of at least 0.6.",
+      "predicted_answer": "Inter-annotator\nagreement (Cohen's kappa) must be >= 0.6, otherwise the evaluation is\ndiscarded and re-run with a calibration session. [DOC-006] Release Gate\nA model may ship only if BLEU-4 has not regressed by more than 0.5\npoints and average human Adequacy is >= 4.0/5. [DOC-006] Domain Adaptation\nFor technical-support translation, we use in-domain fine-tuning data\nmined from past tickets. [DOC-006]",
+      "expected_doc_ids": [
+        "DOC-006"
+      ],
+      "predicted_citations": [
+        "DOC-006"
+      ],
+      "answer_relevance": 0.11474496970759465,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.110284999981559,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-027",
+      "question": "What translation release-gate criteria must be met?",
+      "expected_answer": "BLEU-4 must not regress by more than 0.5 points, and average human Adequacy must be at least 4.0 out of 5.",
+      "predicted_answer": "Membership\ninference and extraction attacks must be tested before release. [DOC-003] Inter-annotator\nagreement (Cohen's kappa) must be >= 0.6, otherwise the evaluation is\ndiscarded and re-run with a calibration session. [DOC-006] Release Gate\nA model may ship only if BLEU-4 has not regressed by more than 0.5\npoints and average human Adequacy is >= 4.0/5. [DOC-006]",
+      "expected_doc_ids": [
+        "DOC-006"
+      ],
+      "predicted_citations": [
+        "DOC-003",
+        "DOC-006"
+      ],
+      "answer_relevance": 0.341789771349563,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.8738100000300619,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-028",
+      "question": "Which base model and adaptation technique are used for technical-support translation?",
+      "expected_answer": "NLLB-200 distilled to 600M parameters, with LoRA adapters carrying the domain weights.",
+      "predicted_answer": "Domain Adaptation\nFor technical-support translation, we use in-domain fine-tuning data\nmined from past tickets. [DOC-006] Release Gate\nA model may ship only if BLEU-4 has not regressed by more than 0.5\npoints and average human Adequacy is >= 4.0/5. [DOC-006] -support translation, we use in-domain fine-tuning data\nmined from past tickets. [DOC-006]",
+      "expected_doc_ids": [
+        "DOC-006"
+      ],
+      "predicted_citations": [
+        "DOC-006"
+      ],
+      "answer_relevance": 0.048392036401817426,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.0766249999960564,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-029",
+      "question": "What are the three eligibility criteria for becoming on-call eligible?",
+      "expected_answer": "Ninety days of team tenure, two shadow shifts with a senior engineer, and a runbook quiz score of at least 80%.",
+      "predicted_answer": "Eligibility\nAn engineer becomes on-call eligible after (a) 90 days of tenure on the\nteam, (b) two shadow shifts with a senior engineer, and (c) passing the\nrunbook quiz with a score of at least 80%. [DOC-007] # On-Call Engineer Onboarding Guide\n\n## 1. [DOC-007] Schedule\nPrimary rotations are 7 days, Monday 09:00 to the following Monday\n09:00 Jakarta time. [DOC-007]",
+      "expected_doc_ids": [
+        "DOC-007"
+      ],
+      "predicted_citations": [
+        "DOC-007"
+      ],
+      "answer_relevance": 0.43122197416584374,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.0640529999932369,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-030",
+      "question": "How long is a primary on-call rotation?",
+      "expected_answer": "Seven days, from Monday 09:00 to the following Monday 09:00 Jakarta time.",
+      "predicted_answer": "Escalation Path\nFirst responder is the primary on-call engineer. [DOC-001] If unacknowledged after\n10 minutes, the alert escalates to the secondary on-call engineer. [DOC-001]",
+      "expected_doc_ids": [
+        "DOC-007"
+      ],
+      "predicted_citations": [
+        "DOC-001"
+      ],
+      "answer_relevance": 0.02846533162764092,
+      "retrieval_hit": true,
+      "citation_faithful": false,
+      "latency_ms": 0.9535320000395586,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-031",
+      "question": "What is the on-call compensation structure?",
+      "expected_answer": "0.25x base hourly rate while not actively engaged, and 1.5x base hourly rate while actively engaged on an incident.",
+      "predicted_answer": "Escalation Path\nFirst responder is the primary on-call engineer. [DOC-001] Severity Classification\nSeverity is assigned automatically by the classifier and may be escalated\nmanually by the on-call engineer. [DOC-001]",
+      "expected_doc_ids": [
+        "DOC-007"
+      ],
+      "predicted_citations": [
+        "DOC-001"
+      ],
+      "answer_relevance": 0.011304194666834817,
+      "retrieval_hit": true,
+      "citation_faithful": false,
+      "latency_ms": 1.055483000016011,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-032",
+      "question": "What four expectations does an engineer have during the first hour of a page?",
+      "expected_answer": "Acknowledge within 5 minutes, open the runbook within 10, post a status update within 15, and decide mitigate-vs-investigate by minute 20.",
+      "predicted_answer": "First-Hour Response\nFor any page during a shift, the engineer is expected to:\n\n1. [DOC-007] Tooling\nOn-call engineers must have these installed and tested before their\nfirst shift: PagerDuty mobile app, the SMP CLI (smpctl), VPN client,\nand the runbook viewer. [DOC-007] Acknowledge the page within 5 minutes. [DOC-007]",
+      "expected_doc_ids": [
+        "DOC-007"
+      ],
+      "predicted_citations": [
+        "DOC-007"
+      ],
+      "answer_relevance": 0.10345586174610391,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.227939999978389,
+      "difficulty": "hard"
+    },
+    {
+      "qa_id": "QA-033",
+      "question": "Why was Qdrant chosen over pgvector and FAISS for production?",
+      "expected_answer": "Filter pushdown for tenant-scoped retrieval, native hybrid search, and horizontal scaling without index rebuilds.",
+      "predicted_answer": "Decision\nWe chose **Qdrant** for the production deployment because (a) the\nfilter pushdown is critical for tenant-scoped retrieval, (b) hybrid\nsearch is supported out of the box, and (c) it scales horizontally\nwithout rebuilding the index. [DOC-008] We retain **FAISS** for offline evaluation, prototyping, and unit\ntests where reproducibility outweighs operational concerns. [DOC-008] yload\n  indexing, and hybrid search natively. [DOC-008]",
+      "expected_doc_ids": [
+        "DOC-008"
+      ],
+      "predicted_citations": [
+        "DOC-008"
+      ],
+      "answer_relevance": 0.2872112003346408,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.9949199999823577,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-034",
+      "question": "Where is FAISS still used after the migration to Qdrant?",
+      "expected_answer": "Offline evaluation, prototyping, and unit tests where reproducibility matters more than operational concerns.",
+      "predicted_answer": "Decision\nWe chose **Qdrant** for the production deployment because (a) the\nfilter pushdown is critical for tenant-scoped retrieval, (b) hybrid\nsearch is supported out of the box, and (c) it scales horizontally\nwithout rebuilding the index. [DOC-008] If unacknowledged after\n10 minutes, the alert escalates to the secondary on-call engineer. [DOC-001] After\n20 minutes, the incident commander is paged automatically. [DOC-001]",
+      "expected_doc_ids": [
+        "DOC-008"
+      ],
+      "predicted_citations": [
+        "DOC-008",
+        "DOC-001"
+      ],
+      "answer_relevance": 0.00281258101798138,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1150249999900552,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-035",
+      "question": "Which embedding models are standard for English and for multilingual retrieval?",
+      "expected_answer": "all-MiniLM-L6-v2 for English (384 dimensions) and multilingual-e5-base for cross-lingual retrieval (768 dimensions).",
+      "predicted_answer": "Embedding Model\nWe standardize on `sentence-transformers/all-MiniLM-L6-v2` for English\nand `intfloat/multilingual-e5-base` for cross-lingual retrieval. [DOC-008] ping, and unit\ntests where reproducibility outweighs operational concerns. [DOC-008] Embedding dimensionality: 384 (MiniLM), 768 (E5). [DOC-008]",
+      "expected_doc_ids": [
+        "DOC-008"
+      ],
+      "predicted_citations": [
+        "DOC-008"
+      ],
+      "answer_relevance": 0.48567213014633315,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1923889999820858,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-036",
+      "question": "What four sections should every production prompt contain?",
+      "expected_answer": "Role, task, context, and output format, in that order.",
+      "predicted_answer": "Structure\nEvery production prompt should contain four sections in this order:\nrole, task, context, output format. [DOC-009] # Prompt Engineering Best Practices\n\n## 1. [DOC-009] Few-Shot Examples\nTwo to four examples are usually optimal. [DOC-009]",
+      "expected_doc_ids": [
+        "DOC-009"
+      ],
+      "predicted_citations": [
+        "DOC-009"
+      ],
+      "answer_relevance": 0.29814473174852585,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.8915129999991223,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-037",
+      "question": "What is the recommended number of few-shot examples in a prompt?",
+      "expected_answer": "Two to four. Above five, returns diminish.",
+      "predicted_answer": "Few-Shot Examples\nTwo to four examples are usually optimal. [DOC-009] For structured outputs,\nprefer JSON schema in the prompt and validate the response. [DOC-009]",
+      "expected_doc_ids": [
+        "DOC-009"
+      ],
+      "predicted_citations": [
+        "DOC-009"
+      ],
+      "answer_relevance": 0.15095238204339512,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.1251200000401695,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-038",
+      "question": "What temperature should be used for deterministic tasks like classification?",
+      "expected_answer": "Zero.",
+      "predicted_answer": "- Using temperature > 0 for deterministic tasks (classification,\n  extraction). [DOC-009] Approved Tools\nOnly Generative AI tools listed in the central AI registry may be used\nfor company work. [DOC-004] and retry once if validation fails; on second failure, return a\nfallback. [DOC-009]",
+      "expected_doc_ids": [
+        "DOC-009"
+      ],
+      "predicted_citations": [
+        "DOC-009",
+        "DOC-004"
+      ],
+      "answer_relevance": 0.0,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.942621000035615,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-039",
+      "question": "List two prompt-engineering anti-patterns called out in the guidelines.",
+      "expected_answer": "Asking the model to think step by step in user-facing responses, and stuffing the entire knowledge base into the prompt instead of using retrieval.",
+      "predicted_answer": "Anti-Patterns\n- Asking the model to \"think step by step\" in user-facing responses\n  bloats latency and exposes reasoning that confuses end users. [DOC-009] - Stuffing the entire knowledge base into the prompt instead of using\n  retrieval. [DOC-009] # Prompt Engineering Best Practices\n\n## 1. [DOC-009]",
+      "expected_doc_ids": [
+        "DOC-009"
+      ],
+      "predicted_citations": [
+        "DOC-009"
+      ],
+      "answer_relevance": 0.7254357545385163,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.088890000005449,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-040",
+      "question": "How are prompt changes managed in production?",
+      "expected_answer": "Prompts are treated as code: every change goes through code review, ships with a changelog entry, and is regression-tested on the evaluation set.",
+      "predicted_answer": "Structure\nEvery production prompt should contain four sections in this order:\nrole, task, context, output format. [DOC-009] \"You are a customer support agent for a\ntelecom company in Indonesia\" outperforms unscoped prompts on factual\naccuracy by roughly 12% on our internal benchmark. [DOC-009] # Prompt Engineering Best Practices\n\n## 1. [DOC-009]",
+      "expected_doc_ids": [
+        "DOC-009"
+      ],
+      "predicted_citations": [
+        "DOC-009"
+      ],
+      "answer_relevance": 0.03427139426972464,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.9176259999890135,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-041",
+      "question": "What four services compose the DocuMind system?",
+      "expected_answer": "Ingestion service, ML service, backend, and frontend.",
+      "predicted_answer": "High-Level Architecture\nDocuMind is composed of four services:\n\n- **Ingestion service** (Python): chunking, embedding, indexing. [DOC-010] # DocuMind System Overview\n\n## 1. [DOC-010] Mission\nDocuMind is an internal Document Q&A assistant that lets employees\nask natural-language questions over the company's policy, engineering,\nand operations knowledge bases. [DOC-010]",
+      "expected_doc_ids": [
+        "DOC-010"
+      ],
+      "predicted_citations": [
+        "DOC-010"
+      ],
+      "answer_relevance": 0.10323520005274511,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.8586550000018178,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-042",
+      "question": "What is the answer-relevance SLO for DocuMind?",
+      "expected_answer": "At least 0.85 on the evaluation set.",
+      "predicted_answer": "- Answer relevance: >= 0.85 on the evaluation set. [DOC-010] The ML service retrieves the top-k\nchunks, reranks them, prompts the LLM with the chunks and question,\nand returns the grounded answer plus citations. [DOC-010] The backend logs the\nexchange and streams the answer back to the frontend. [DOC-010]",
+      "expected_doc_ids": [
+        "DOC-010"
+      ],
+      "predicted_citations": [
+        "DOC-010"
+      ],
+      "answer_relevance": 0.23361957399032987,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.921946999994816,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-043",
+      "question": "What is the citation-faithfulness target for DocuMind?",
+      "expected_answer": "At least 0.90.",
+      "predicted_answer": "- Citation faithfulness: >= 0.90. [DOC-010] Out of Scope\nDocuMind does not (yet): generate new documents, modify the knowledge\nbase, take actions on the user's behalf, or operate without a\nretrieval grounding step. [DOC-010] These are explicit non-goals for the v1\nrelease. [DOC-010]",
+      "expected_doc_ids": [
+        "DOC-010"
+      ],
+      "predicted_citations": [
+        "DOC-010"
+      ],
+      "answer_relevance": 0.04341355084838747,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.0077239999759513,
+      "difficulty": "easy"
+    },
+    {
+      "qa_id": "QA-044",
+      "question": "What is explicitly out of scope for DocuMind v1?",
+      "expected_answer": "Generating new documents, modifying the knowledge base, taking actions on the user's behalf, and operating without a retrieval grounding step.",
+      "predicted_answer": "Out of Scope\nDocuMind does not (yet): generate new documents, modify the knowledge\nbase, take actions on the user's behalf, or operate without a\nretrieval grounding step. [DOC-010] Decision\nWe chose **Qdrant** for the production deployment because (a) the\nfilter pushdown is critical for tenant-scoped retrieval, (b) hybrid\nsearch is supported out of the box, and (c) it scales horizontally\nwithout rebuilding the index. [DOC-008] These are explicit non-goals for the v1\nrelease. [DOC-010]",
+      "expected_doc_ids": [
+        "DOC-010"
+      ],
+      "predicted_citations": [
+        "DOC-010",
+        "DOC-008"
+      ],
+      "answer_relevance": 0.2986706980610764,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 0.9535739999932957,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-045",
+      "question": "Which embedding model is shared between the Customer Support Chatbot and the standard documented in the Vector Database Selection Rationale?",
+      "expected_answer": "sentence-transformers/all-MiniLM-L6-v2, used for English retrieval in both.",
+      "predicted_answer": "Background\nSMP needed to choose a vector database to back the RAG retrieval layer\nof the Customer Support Chatbot and DocuMind. [DOC-008] # Vector Database Selection Rationale\n\n## 1. [DOC-008] Overview\nThe Customer Support Chatbot resolves Tier-1 inquiries using a\nretrieval-augmented generation (RAG) pipeline backed by the company\nknowledge base. [DOC-005]",
+      "expected_doc_ids": [
+        "DOC-005",
+        "DOC-008"
+      ],
+      "predicted_citations": [
+        "DOC-008",
+        "DOC-005"
+      ],
+      "answer_relevance": 0.017994600828978698,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.5716240000074322,
+      "difficulty": "hard"
+    },
+    {
+      "qa_id": "QA-046",
+      "question": "How do the SLOs of DocuMind compare to those of the Customer Support Chatbot?",
+      "expected_answer": "Both target answer relevance at least 0.85 and citation/faithfulness at least 0.90; DocuMind additionally targets 99.5% monthly availability and the Chatbot targets a deflection rate of at least 0.60.",
+      "predicted_answer": "Background\nSMP needed to choose a vector database to back the RAG retrieval layer\nof the Customer Support Chatbot and DocuMind. [DOC-008] Overview\nThe Customer Support Chatbot resolves Tier-1 inquiries using a\nretrieval-augmented generation (RAG) pipeline backed by the company\nknowledge base. [DOC-005] # Customer Support Chatbot Architecture\n\n## 1. [DOC-005]",
+      "expected_doc_ids": [
+        "DOC-005",
+        "DOC-010"
+      ],
+      "predicted_citations": [
+        "DOC-008",
+        "DOC-005"
+      ],
+      "answer_relevance": 0.04426233209930257,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.209442999993371,
+      "difficulty": "hard"
+    },
+    {
+      "qa_id": "QA-047",
+      "question": "If an engineer wants to ship a translation model that uses a Generative AI service, which two policies and which evaluation standard apply?",
+      "expected_answer": "The ML Deployment Standard governs promotion gates and rollout, the Generative AI Usage Guidelines govern approved tools and disclosed use, and the Translation Quality Evaluation Standard governs metrics and human evaluation.",
+      "predicted_answer": "Release Gate\nA model may ship only if BLEU-4 has not regressed by more than 0.5\npoints and average human Adequacy is >= 4.0/5. [DOC-006] Attribution\nWhen Generative AI substantially contributed to a deliverable, the\ncontribution must be disclosed in the document footer or commit message. [DOC-004] Training Data\nSubmitting company data to vendors that retain prompts for training is\nprohibited unless an explicit zero-data-retention agreement is in place\nand approved by the Legal team. [DOC-004]",
+      "expected_doc_ids": [
+        "DOC-002",
+        "DOC-004",
+        "DOC-006"
+      ],
+      "predicted_citations": [
+        "DOC-006",
+        "DOC-004"
+      ],
+      "answer_relevance": 0.0667980595424501,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.5047800000047573,
+      "difficulty": "hard"
+    },
+    {
+      "qa_id": "QA-048",
+      "question": "What protections combine to prevent PII leakage from a production LLM?",
+      "expected_answer": "Encryption and access controls from the Privacy Policy, the prohibition on pasting PII into AI tools from the GenAI Guidelines, and de-identification or secure-enclave training plus extraction-attack testing for ML use of PII.",
+      "predicted_answer": "Purpose\nStandardizes how ML models move from a research notebook to a\nproduction-served endpoint inside SMP infrastructure. [DOC-002] Definitions\n**Personally Identifiable Information (PII)** includes any data that can\nidentify a natural person directly or indirectly. [DOC-003] Plaintext PII must never\nbe written to logs, monitoring traces, or analytics events. [DOC-003]",
+      "expected_doc_ids": [
+        "DOC-003",
+        "DOC-004"
+      ],
+      "predicted_citations": [
+        "DOC-002",
+        "DOC-003"
+      ],
+      "answer_relevance": 0.056911040491652756,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.0279090000153701,
+      "difficulty": "hard"
+    },
+    {
+      "qa_id": "QA-049",
+      "question": "What is the minimum tenure plus quiz score combined needed to reach on-call eligibility?",
+      "expected_answer": "Ninety days of tenure plus a runbook quiz score of at least 80% (and two shadow shifts).",
+      "predicted_answer": "Eligibility\nAn engineer becomes on-call eligible after (a) 90 days of tenure on the\nteam, (b) two shadow shifts with a senior engineer, and (c) passing the\nrunbook quiz with a score of at least 80%. [DOC-007] # On-Call Engineer Onboarding Guide\n\n## 1. [DOC-007] Schedule\nPrimary rotations are 7 days, Monday 09:00 to the following Monday\n09:00 Jakarta time. [DOC-007]",
+      "expected_doc_ids": [
+        "DOC-007"
+      ],
+      "predicted_citations": [
+        "DOC-007"
+      ],
+      "answer_relevance": 0.3298898896266509,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2025080000057642,
+      "difficulty": "medium"
+    },
+    {
+      "qa_id": "QA-050",
+      "question": "Why is temperature zero recommended for extraction tasks, and what other anti-pattern does the prompt guide flag for production prompts?",
+      "expected_answer": "Temperature zero gives deterministic outputs needed for extraction and classification; another anti-pattern is stuffing the knowledge base into the prompt instead of using retrieval.",
+      "predicted_answer": "- Using temperature > 0 for deterministic tasks (classification,\n  extraction). [DOC-009] Anti-Patterns\n- Asking the model to \"think step by step\" in user-facing responses\n  bloats latency and exposes reasoning that confuses end users. [DOC-009] - Stuffing the entire knowledge base into the prompt instead of using\n  retrieval. [DOC-009]",
+      "expected_doc_ids": [
+        "DOC-009"
+      ],
+      "predicted_citations": [
+        "DOC-009"
+      ],
+      "answer_relevance": 0.3432766393123643,
+      "retrieval_hit": true,
+      "citation_faithful": true,
+      "latency_ms": 1.2965160000248943,
+      "difficulty": "medium"
+    }
+  ],
+  "config": {
+    "retriever": "TF-IDF (dense) + BM25 (sparse) hybrid, weights 0.6/0.4",
+    "generator": "extractive_fallback (production uses LLM)",
+    "top_k_final": 4,
+    "note": "Lightweight benchmark. Production pipeline uses sentence-transformers."
+  }
+}
